@@ -4,14 +4,14 @@
 
 <nav class="w3-sidebar w3-bar-block w3-white w3-animate-right w3-top w3-text-black w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
     <a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">CLOSE</a> 
-    <a href="#view" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">VIEW IMAGES</a> 
+    <a href="/pics" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">VIEW IMAGES</a> 
     <a href="/admin" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">ADMIN</a> 
     <a href="{% url 'location' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">LOCATION</a>
   </nav>
   
   <!-- Top menu on small screens -->
   <header class="w3-container w3-top w3-black w3-xlarge w3-padding-16">
-    <span class="w3-left w3-padding"><a href="/"> Dee's Gallery</a></span>
+    <span class="w3-left w3-padding"><a href="/"> Gallery</a></span>
     <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
     <form  class= "w3 center"style="margin-top:10px; margin-left:auto;margin-right:auto; width: 50%;" class="navbar-form" role="search" action="{% url 'search_results' %}">
 
