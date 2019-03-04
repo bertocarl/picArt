@@ -11,7 +11,7 @@
   
   <!-- Top menu on small screens -->
   <header class="w3-container w3-top w3-black w3-xlarge w3-padding-16">
-    <span class="w3-left w3-padding"><a href="/"> Gallery</a></span>
+    <span class="w3-left w3-padding"><a href="/"> P1X3L Gallery</a></span>
     <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
     <form  class= "w3 center"style="margin-top:10px; margin-left:auto;margin-right:auto; width: 50%;" class="navbar-form" role="search" action="{% url 'search_results' %}">
 
@@ -28,12 +28,7 @@
     
   </header>
   
-  <!-- Overlay effect when opening sidebar on small screens -->
-  <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-<div class="w3-display-container"   class="img-responsive"  style="margin-bottom:100px">
-   
-</div>
-<div class="images" id= "view">
+  
   
 {%for image in images%}
 <meta charset="UTF-8">
