@@ -1,9 +1,6 @@
-from django.conf.urls import url
-from . import views
-from django.conf import settings
-from django.conf.urls.static import static
-from django.http  import HttpResponse
+from django.shortcuts import render
 
+# Create your views here.
+def intro(request):
+    return render (request,'first.html')
 
-def pics(request):
-    return HttpResponse('Welcome to PicArt Website')
