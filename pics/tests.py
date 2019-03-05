@@ -5,47 +5,43 @@ from .models import Location,Category,Image
 class CategoryTestClass(TestCase):
  # Set up method
     def setUp(self):
-        self.type= Category(name ='lifestyle')
+        self.type= Category(name ='sports')
 
     def test_instance(self):
         self.assertTrue(isinstance(self.type,Category))
 
     def test_init(self):
        
-        self.assertTrue(self.type.name == 'lifestyle')
+        self.assertTrue(self.type.name == 'sports')
 
     def test_save_method(self):
         self.type.save_category()
-        categorys = Category.objects.all()
+        categories = Category.objects.all()
         self.assertTrue(len(categorys)> 0)
     
     def test_delete_method(self):
         self.type.save_category()
-        categorys = Category.objects.all()
+        categories = Category.objects.all()
         self.type.delete_category()
-        categorys = Category.objects.all()
-        self.assertTrue(len(categorys)==0)
+        categories = Category.objects.all()
+        self.assertTrue(len(categories)==0)
 
     
 
 class LocationTestClass(TestCase):
     def setUp(self):
-        self.place= Location(name ='bangladesh')
+        self.place= Location(name ='Rwanda')
 
     def test_instance(self):
         self.assertTrue(isinstance(self.place,Location))
 
     def test_init(self):
-        self.assertTrue(self.place.name =='bangladesh')
+        self.assertTrue(self.place.name =='Rwanda')
 
     def test_save_method(self):
         self.place.save_location()
         locations = Location.objects.all()
         self.assertTrue(len(locations)> 0)
-
-    def tearDown(self):
-        Location.objects.all().delete()
-
 
     def test_delete_method(self):
         self.place.save_location()
@@ -59,13 +55,13 @@ class ImageTestCase(TestCase):
         """
         This will create a new image before each test case
         """
-        fun = Category(name = "sports")
-        fun.save()
-        lagos = Location(name = "bangladesh")
-        lagos.save()
-        self.new_image = Image(name = "image",description = "h",location = bangladesh,category = sports)
+        sports = Category(name = "sports")
+        sports.save()
+        Rwanda = Location(name = "Rwanda")
+        Rwanda.save()
+        self.new_image = Image(name = "image",description = "rollball world cup",location = 'Rwanda',category = 'sports')
     
-    def tearDown(self):
+    def defaultTestResult(self):
         """
         This will clear the db after each test
         """
@@ -85,7 +81,7 @@ class ImageTestCase(TestCase):
     def test_filter_by_location(self):
         
         self.new_image.save_image()
-        self.assertTrue(len(Image.filter_by_location("India")) >0)
+        self.assertTrue(len(Image.filter_by_location("Rwanda")) >0)
 
     def test_delete_method(self):
         self.new_image.save_image()
@@ -97,4 +93,4 @@ class ImageTestCase(TestCase):
     def test_search_by_category(self):
 
         self.new_image.save_image()
-        self.assertTrue(len(Image.search_by_category("technology"))>0)
+        self.assertTrue(len(Image.search_by_category("sports"))>0)

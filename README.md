@@ -25,7 +25,7 @@ p1x3l is a simple python application that allows users view various photos i hav
 
 
 ## Live Demo
- Here is a link to a live demo : 
+ Here is a link to a live demo :https://p1x3l.herokuapp.com/
 
 ## Description
 P1x3l is a simple python application that allows users view various photos i have uploaded and get description on the images.
@@ -78,4 +78,4 @@ There are no known bugs for this application
 If you have any questions, please feel free to contact me at aomware@gmail.com. You are welcome to make contributions and corrections as needed.
 ### License
 *This project is licensed under the MIT License - see the LICENSE.md file for details*
-Copyright (c) {2019} **{Albert Omware}**
+Copyright (c) {2019} **{Albert Carlos Omware}**
