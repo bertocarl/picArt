@@ -1,12 +1,14 @@
-body,h1 {font-family: "Montserrat", sans-serif}
+body,h1 {
+  font-family: "Montserrat", sans;
+}
 img {margin-bottom: -7px}
 .w3-row-padding img {margin-bottom: 12px}
 div.gallery {
-    border: 1px solid #ccc;
+    border: 1px solid #E3D888;
   }
   
   div.gallery:hover {
-    border: 1px solid #777;
+    border: 1px solid #30011E;
   }
   
   div.gallery img {
@@ -36,7 +38,7 @@ div.gallery {
     }
   }
   
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 480px) {
     .responsive {
       width: 100%;
     }
@@ -47,3 +49,29 @@ div.gallery {
     display: table;
     clear: both;
   }
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  

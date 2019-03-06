@@ -31,4 +31,4 @@ def location(request,location):
         return render(request,'location.html',{"images": locations})
 
 def page(request):
-    return render(request,"page.html",{"title":location})
+    return render(request,"main-page.html",{"title":location})
